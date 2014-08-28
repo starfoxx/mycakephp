@@ -4,6 +4,7 @@ App::uses('AppModel', 'Model');
  * Post Model
  *
  * @property User $User
+ * @property Post $User
  */
 class Post extends AppModel {
 
@@ -52,6 +53,13 @@ class Post extends AppModel {
 	public $belongsTo = array(
 		'User' => array(
 			'className' => 'User',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'User' => array(
+			'className' => 'Post',
 			'foreignKey' => 'user_id',
 			'conditions' => '',
 			'fields' => '',

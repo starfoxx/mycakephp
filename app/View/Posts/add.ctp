@@ -11,21 +11,7 @@
 
 
 	<div class="row">
-		<div class="col-md-3">
-			<div class="actions">
-				<div class="panel panel-default">
-					<div class="panel-heading">Actions</div>
-						<div class="panel-body">
-							<ul class="nav nav-pills nav-stacked">
-
-																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Posts'), array('action' => 'index'), array('escape' => false)); ?></li>
-									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Users'), array('controller' => 'users', 'action' => 'index'), array('escape' => false)); ?> </li>
-		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;New User'), array('controller' => 'users', 'action' => 'add'), array('escape' => false)); ?> </li>
-							</ul>
-						</div>
-					</div>
-				</div>			
-		</div><!-- end col md 3 -->
+		<?php echo $this->element('admin_sidebar');?>
 		<div class="col-md-9">
 			<?php echo $this->Form->create('Post', array('role' => 'form')); ?>
 

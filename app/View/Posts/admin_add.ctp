@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1><?php echo __('Edit Post'); ?></h1>
+				<h1><?php echo __('Admin Add Post'); ?></h1>
 			</div>
 		</div>
 	</div>
@@ -15,9 +15,6 @@
 		<div class="col-md-9">
 			<?php echo $this->Form->create('Post', array('role' => 'form')); ?>
 
-				<div class="form-group">
-					<?php echo $this->Form->input('id', array('class' => 'form-control', 'placeholder' => 'Id'));?>
-				</div>
 				<div class="form-group">
 					<?php echo $this->Form->input('title', array('class' => 'form-control', 'placeholder' => 'Title'));?>
 				</div>

@@ -23,3 +23,20 @@
  */
 Configure::write('Acl.database', 'mycakephp');
 CakePlugin::load('DebugKit');
+define('BASE_PATH', dirname(dirname(dirname(__FILE__))) . '/');
+define('PARENT_PATH', dirname(BASE_PATH));
+define('APP_PATH', BASE_PATH . 'app/');
+define('VENDOR_PATH', APP_PATH . 'Vendor/');
+define('MODEL_PATH', APP_PATH . 'Model/');
+define('VIEW_PATH', APP_PATH . 'View/');
+define('LIB_PATH', APP_PATH . 'Lib/');
+define('PLUGIN_PATH', APP_PATH . 'Plugin/');
+define('CONFIG_PATH', dirname(__FILE__) . '/');
+define('WEBROOT_PATH', getcwd() . '/');
+define('LANG_PATH', LIB_PATH . 'lang/');
+define('LOG_PATH', APP_PATH . 'tmp/logs/');
+define('DIR_NAME', basename(BASE_PATH));
+App::uses('AppError', 'Lib');
+//Configure::write('debug', 1handleE);
+//ChromePhp::error('123');
+

@@ -3,7 +3,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1><?php echo __('Edit Post'); ?></h1>
+				<h1><?php echo __('Admin Edit Post'); ?></h1>
 			</div>
 		</div>
 	</div>

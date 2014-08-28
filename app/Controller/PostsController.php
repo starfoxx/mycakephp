@@ -5,6 +5,7 @@ App::uses('AppController', 'Controller');
  *
  * @property Post $Post
  * @property PaginatorComponent $Paginator
+ * @property SessionComponent $Session
  */
 class PostsController extends AppController {
 
@@ -13,7 +14,7 @@ class PostsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator');
+	public $components = array('Paginator', 'Session');
 
 /**
  * index method
@@ -55,7 +56,7 @@ class PostsController extends AppController {
 				$this->Session->setFlash(__('The post could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
-		$users = $this->Post->User->find('list');
+		$users = $this->Post->find('list');
 		$this->set(compact('users'));
 	}
 
@@ -81,7 +82,7 @@ class PostsController extends AppController {
 			$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
 			$this->request->data = $this->Post->find('first', $options);
 		}
-		$users = $this->Post->User->find('list');
+		$users = $this->Post->find('list');
 		$this->set(compact('users'));
 	}
 
@@ -146,7 +147,7 @@ class PostsController extends AppController {
 				$this->Session->setFlash(__('The post could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
-		$users = $this->Post->User->find('list');
+		$users = $this->Post->find('list');
 		$this->set(compact('users'));
 	}
 
@@ -172,7 +173,7 @@ class PostsController extends AppController {
 			$options = array('conditions' => array('Post.' . $this->Post->primaryKey => $id));
 			$this->request->data = $this->Post->find('first', $options);
 		}
-		$users = $this->Post->User->find('list');
+		$users = $this->Post->find('list');
 		$this->set(compact('users'));
 	}
 
