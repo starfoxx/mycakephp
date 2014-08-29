@@ -107,4 +107,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 
-require_once 'bootstrap_custom.php';
+require_once 'define.inc';

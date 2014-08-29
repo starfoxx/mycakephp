@@ -89,13 +89,13 @@ class DATABASE_CONFIG {
     public $default = array(
     'datasource' => 'Database/Mysql',
     'persistent' => false,
-    'host' => 'localhost',
+    'host' => DB_HOST,
     'port' => '',
-    'login' => 'mycakephp',
-    'password' => '123456a@',
-    'database' => 'mycakephp',
+    'login' => DB_USERNAME,
+    'password' => DB_PASSWORD,
+    'database' => DB_NAME,
     'schema' => '',
-    'prefix' => '',
+    'prefix' => DB_PREFIX,
     'encoding' => 'utf8'
 );
 }
