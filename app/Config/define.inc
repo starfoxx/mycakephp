@@ -37,6 +37,7 @@ define('WEBROOT_PATH', getcwd() . DS);
 define('LANG_PATH', LIB_PATH . 'lang' . DS);
 define('LOG_PATH', APP_PATH . 'tmp' . DS . 'logs' . DS);
 define('DIR_NAME', basename(BASE_PATH));
+set_include_path(get_include_path() . PATH_SEPARATOR . VENDOR_PATH.'/google-api/src');
 App::uses('AppError', 'Lib');
 App::uses('GlobalVar', 'Lib');
 //Configure::write('debug', 1handleE);

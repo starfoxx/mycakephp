@@ -16,6 +16,10 @@ class UsersController extends AppController {
  */
 	public $components = array('Paginator', 'Session');
 
+    public function beforeFilter() {
+        parent::beforeFilter();
+         $this->Auth->allow('add', 'logout');
+    }
 /**
  * index method
  *
